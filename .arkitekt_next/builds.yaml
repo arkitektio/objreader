@@ -1,0 +1,85 @@
+builds:
+- build_id: 2984cc0f-3afa-44fa-b85f-ac1abdad7589
+  build_run: 57efec4e-1bd6-4481-932a-cecefceb90a8
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    implementations:
+    - definition:
+        args:
+        - effects: []
+          identifier: '@mikro/file'
+          key: file
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+          widget:
+            kind: SEARCH
+            query: "query SearchFiles($search: String, $values: [ID!], $pagination:\
+              \ OffsetPaginationInput) {\n  options: files(\n    filters: {search:\
+              \ $search, ids: $values}\n    pagination: $pagination\n  ) {\n    value:\
+              \ id\n    label: name\n    __typename\n  }\n}"
+            ward: mikro
+        - effects: []
+          identifier: '@mikro/stage'
+          key: stage
+          kind: STRUCTURE
+          nullable: true
+          validators: []
+          widget:
+            kind: SEARCH
+            query: "query SearchStages($search: String, $values: [ID!], $pagination:\
+              \ OffsetPaginationInput) {\n  options: stages(\n    filters: {search:\
+              \ $search, ids: $values}\n    pagination: $pagination\n  ) {\n    value:\
+              \ id\n    label: name\n    __typename\n  }\n}"
+            ward: mikro
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        key: convert_omero_file
+        kind: GENERATOR
+        logo: ome.png
+        name: Convert Omero File
+        portGroups: []
+        returns:
+        - effects: []
+          identifier: '@mikro/image'
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        stateful: true
+        version: '1'
+      dependencies: []
+      dynamic: false
+      interface: convert_omero_file
+      locks: []
+      logo: ome.png
+      optimistics: []
+    locks: []
+    requirements:
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: false
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to actions
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Rekuest to assign to actions
+      key: s3
+      optional: false
+      service: live.arkitekt.s3
+    size: 1669059373
+    states: []
+  manifest:
+    author: jhnnsrs
+    identifier: ome
+    scopes:
+    - read
+    version: 0.4.0
+  selectors: []
+latest_build_run: 57efec4e-1bd6-4481-932a-cecefceb90a8
