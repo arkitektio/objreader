@@ -1,7 +1,7 @@
 {
-    "name": "ome vanilla Devcontainer",
+    "name": "obf vanilla Devcontainer",
     "build": {
-        "dockerfile": "/home/jhnnsrs/Code/apps/omero/.arkitekt_next/flavours/vanilla/Dockerfile",
+        "dockerfile": "/home/jhnnsrs/Code/apps/objreader/.arkitekt/flavours/vanilla/Dockerfile",
         "context": "../.."
     },
     "runArgs": [

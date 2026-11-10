@@ -145,3 +145,6 @@ media
 export
 static_collected
 data
+# Sample data: an OBF/MSR file runs to gigabytes and is never committed.
+*.obf
+*.msr

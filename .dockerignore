@@ -1,1 +1,14 @@
-.venv
+# The image builds its own environment, at /opt/venv.
+.venv/
+.git/
+**/__pycache__/
+.pytest_cache/
+.ruff_cache/
+# Arkitekt's credentials, caches and the agent's journal.
+.arkitekt/*.json
+.arkitekt/cache/
+.arkitekt/servers/
+.arkitekt/rekuest_journal.db*
+# Sample data: an OBF/MSR file runs to gigabytes and is never part of the image.
+*.obf
+*.msr

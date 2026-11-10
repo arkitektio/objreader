@@ -1,17 +1,52 @@
 [project]
-name = "omero"
+name = "objreader"
 version = "0.1.0"
-description = "Add your description here"
+description = "Converts Imspector OBF/MSR files into mikro datasets, one per acquisition"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "arkitekt-next[all,reaktion]==0.39.2",
-    "bioio>=3.0.0",
-    "bioio-bioformats>=1.3.0",
-    "bioio-czi>=2.4.0",
-    "bioio-imageio>=1.3.0",
-    "bioio-lif>=1.4.1",
-    "bioio-nd2>=1.5.0",
-    "bioio-tifffile>=1.3.0",
-    "mikro-next>=1.0.2",
+    "arkitekt[all]>=14.1.0",
+    # obffile.py imports dask.array at the top: a compressed stack streams into a scratch
+    # Zarr and comes back as a dask array.
+    "dask[array]>=2026.8.0",
+    "kanne>=2.6.0",
+    # 13.1: the `@mikro/extension` descriptor the File port requires.
+    "mikro[xarray]>=13.1.0",
+    "numpy>=2.5.4",
+    # Not optional in practice: without it `try_parse_ome` only warns, and the app converts
+    # geometry alone, with no light path, channel names or stage positions.
+    "ome-types>=0.7.0",
+    "xarray>=2026.9.0",
+    "zarr>=3.1",
 ]
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    # The hub tests (`-m hub`): a hub made for them, from the images the clients declare.
+    "konstruktor>=0.34.1",
+]
+
+[tool.pytest.ini_options]
+addopts = "-m 'not hub'"
+markers = [
+    "hub: needs a hub made for the tests (Docker and konstruktor)",
+]
+
+[tool.semantic_release]
+version_variables = ["app.py:__version__"]
+commit_message = "chore(release): {version} [skip ci]"
+tag_format = "v{version}"
+allow_zero_version = true
+
+[tool.semantic_release.branches.release]
+match = "main"
+prerelease = false
+
+[tool.ruff.lint]
+extend-select = ["UP"]
+extend-ignore = ["UP037", "UP038", "UP042", "UP040", "UP046", "UP047", "UP049"]
