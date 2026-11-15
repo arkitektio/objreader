@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.2 (2026-11-15)
+
+### Bug Fixes
+
+- **deps**: Arkitekt 17 and arkitekt-spec 11
+  ([`fadd95e`](https://github.com/arkitektio/objreader/commit/fadd95ea8103a3173d3767c50414278dfd4ae678))
+
+
 ## v0.1.1 (2026-11-15)
 
 ### Bug Fixes
