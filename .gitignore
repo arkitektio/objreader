@@ -148,3 +148,8 @@ data
 # Sample data: an OBF/MSR file runs to gigabytes and is never committed.
 *.obf
 *.msr
+
+# Local sample images and scratch scripts.
+/*.tiff
+/ome.png
+/z.py

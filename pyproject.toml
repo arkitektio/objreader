@@ -42,6 +42,8 @@ version_variables = ["app.py:__version__"]
 commit_message = "chore(release): {version} [skip ci]"
 tag_format = "v{version}"
 allow_zero_version = true
+# A breaking change before 1.0 raises the minor version.
+major_on_zero = false
 
 [tool.semantic_release.branches.release]
 match = "main"
