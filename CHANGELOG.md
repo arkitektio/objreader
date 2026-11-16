@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.1.3 (2026-11-16)
+
+### Bug Fixes
+
+- Release an image built on arkitekt 18
+  ([`a8b87de`](https://github.com/arkitektio/objreader/commit/a8b87de751d7e8c2906d93f10c8402faf35d2446))
+
+### Build System
+
+- Lock arkitekt 18
+  ([`b7f1fc5`](https://github.com/arkitektio/objreader/commit/b7f1fc594107d3ac55f284221e8ea6f28d93f086))
+
+
 ## v0.1.2 (2026-11-15)
 
 ### Bug Fixes
