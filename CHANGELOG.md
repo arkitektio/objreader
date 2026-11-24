@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.4 (2026-11-24)
+
+### Bug Fixes
+
+- Build on arkitekt 18.5.2, rekuest 18, arkitekt-spec 13 and mikro 14.2
+  ([`201b4d1`](https://github.com/arkitektio/objreader/commit/201b4d1f5f0058a596465d371fad20ef60d78749))
+
+
 ## v0.1.3 (2026-11-16)
 
 ### Bug Fixes
