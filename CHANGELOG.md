@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.5 (2026-11-25)
+
+### Bug Fixes
+
+- Runs on arkitekt 19
+  ([`cfce5b8`](https://github.com/arkitektio/objreader/commit/cfce5b8ab3143f8041c68d697e5f35b8965dc50b))
+
+
 ## v0.1.4 (2026-11-24)
 
 ### Bug Fixes
