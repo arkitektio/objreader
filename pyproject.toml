@@ -5,13 +5,13 @@ description = "Converts Imspector OBF/MSR files into mikro datasets, one per acq
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "arkitekt[all]>=18.5.2",
+    "arkitekt[all]>=19.0.0",
     # obffile.py imports dask.array at the top: a compressed stack streams into a scratch
     # Zarr and comes back as a dask array.
     "dask[array]>=2026.8.0",
     "kanne>=2.6.0",
     # 13.1: the `@mikro/extension` descriptor the File port requires.
-    "mikro[xarray]>=14.2.0",
+    "mikro[xarray]>=15.0.0",
     "numpy>=2.5.4",
     # Not optional in practice: without it `try_parse_ome` only warns, and the app converts
     # geometry alone, with no light path, channel names or stage positions.

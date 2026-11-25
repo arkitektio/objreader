@@ -48,7 +48,7 @@ from typing import Annotated, Any
 import xarray as xr
 from arkitekt import App, DescriptorOperator, Requires, Task, run
 from kanne.scalars import Unit
-from mikro import Mikro, build_pyramid, canonical, mikro_service, scales_from, space_3d
+from mikro import Mikro, build_pyramid, canonical, scales_from, space_3d
 from mikro.api.schema import (
     PlacementValidity,
     ArrayDataset,
@@ -112,7 +112,6 @@ app = App(
         "multi-channel dataset per acquisition, with its OME metadata, light path and "
         "device state, placed in a shared micrometer space."
     ),
-    services=[mikro_service],
 )
 
 
